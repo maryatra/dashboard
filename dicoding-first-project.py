@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Fungsi untuk mengimpor data
-@st.cache_data
+@st.cache
 def load_data():
     data_df = pd.read_csv('day.csv')
     return data_df
@@ -107,6 +107,6 @@ def main():
         data_wrangling(data_df)
     elif choice == "Exploratory Data Analysis (EDA)":
         eda_questions(data_df)
-        
-    if __name__ == "__main__":
-        main() 
+
+if __name__ == "__main__":
+    main() 
